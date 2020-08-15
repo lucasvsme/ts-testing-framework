@@ -35,7 +35,11 @@ Tests.grouped("Assertions API", (suite) => [
     Expect("123").not.toEqual("321");
   }),
 
-  suite.test("Expect greaterThanOrEqualTo true", async () => {
+  suite.test("Expect greaterThanOrEqualTo false", async () => {
     Expect("123").greaterThanOrEqualTo("3210");
+  }),
+
+  suite.test("Expect greaterThanOrEqualTo true", async () => {
+    Expect(20).greaterThanOrEqualTo(15);
   }),
 ]);
