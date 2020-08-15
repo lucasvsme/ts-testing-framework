@@ -64,17 +64,17 @@ function compare<T>(actual: T, comparison: Comparison<T>): Assertion<T> {
 
 export function Expect<T>(actual: T) {
   const standard = {
-    toEqual: compare(actual, equalValue),
-    toStrictEqual: compare(actual, equalValueAndType),
-    greaterThan: compare(actual, greater),
-    greaterThanOrEqualTo: compare(actual, greaterOrEqual),
+    toBeEqualTo: compare(actual, equalValue),
+    toBeStrictEqual: compare(actual, equalValueAndType),
+    toBeGreaterThan: compare(actual, greater),
+    toBeGreaterThanOrEqualTo: compare(actual, greaterOrEqual),
   };
 
   const negated: typeof standard = {
-    toEqual: compare(actual, notEqualValue),
-    toStrictEqual: compare(actual, notEqualValueAndType),
-    greaterThan: compare(actual, noop),
-    greaterThanOrEqualTo: compare(actual, noop),
+    toBeEqualTo: compare(actual, notEqualValue),
+    toBeStrictEqual: compare(actual, notEqualValueAndType),
+    toBeGreaterThan: compare(actual, noop),
+    toBeGreaterThanOrEqualTo: compare(actual, noop),
   };
 
   return { ...standard, not: negated };
