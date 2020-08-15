@@ -2,7 +2,7 @@ import { TestSuite, TestSuiteImpl } from "./suite";
 
 export class Tests {
   public static run(tests: (suite: TestSuite) => Promise<void>[]): void {
-    const suite = new TestSuiteImpl();
+    const suite: TestSuite = new TestSuiteImpl();
 
     void suite.run(tests(suite));
   }
@@ -11,7 +11,7 @@ export class Tests {
     title: string,
     tests: (suite: TestSuite) => Promise<void>[]
   ): void {
-    const suite = new TestSuiteImpl({ title });
+    const suite: TestSuite = new TestSuiteImpl({ title });
 
     void suite.run(tests(suite));
   }
