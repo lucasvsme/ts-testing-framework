@@ -1,20 +1,18 @@
 import { TestSuite, TestSuiteImpl } from "./suite";
 
 export class Tests {
-  public static async run(
-    tests: (suite: TestSuite) => Promise<void>[]
-  ): Promise<void> {
+  public static run(tests: (suite: TestSuite) => Promise<void>[]): void {
     const suite = new TestSuiteImpl();
 
-    suite.run(tests(suite));
+    void suite.run(tests(suite));
   }
 
-  public static async grouped(
+  public static grouped(
     title: string,
     tests: (suite: TestSuite) => Promise<void>[]
-  ): Promise<void> {
+  ): void {
     const suite = new TestSuiteImpl({ title });
 
-    suite.run(tests(suite));
+    void suite.run(tests(suite));
   }
 }
