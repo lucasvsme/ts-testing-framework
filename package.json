@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "dist/index.js",
   "scripts": {
-    "start": "nodemon index.ts",
+    "test": "ts-node index.ts",
     "build": "tsc"
   },
   "dependencies": {
@@ -17,7 +17,6 @@
     "husky": "4.2.5",
     "jest": "26.1.0",
     "lint-staged": "10.2.11",
-    "nodemon": "2.0.4",
     "prettier": "2.0.5",
     "ts-node": "8.10.2",
     "typescript": "3.9.6"
@@ -26,13 +25,6 @@
     "preset": "ts-jest",
     "testEnvironment": "node",
     "collectCoverage": true
-  },
-  "nodemonConfig": {
-    "watch": [
-      "src"
-    ],
-    "ext": "ts",
-    "exec": "ts-node ./index.ts"
   },
   "eslintConfig": {
     "root": true,
