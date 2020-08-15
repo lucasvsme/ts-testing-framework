@@ -1,3 +1,5 @@
+import { TestSuite } from "./suite";
+
 export interface TestReporter {
   generate(suite: TestSuite): string;
 }
