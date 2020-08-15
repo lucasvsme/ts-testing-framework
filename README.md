@@ -10,6 +10,7 @@ The non-goal is to replace any existing production-ready or not testing framewor
 
 | Description | Command |
 | :--- | :--- |
+| Install dependencies | `npm install` |
 | Run examples | `npm test` |
 
 ## Example
