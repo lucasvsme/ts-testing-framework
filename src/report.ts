@@ -17,9 +17,9 @@ export class TestReporterImpl implements TestReporter {
   private readonly templateError = this.red + "{{message}}\n";
 
   public generate(suite: TestSuite): string {
-    let report: string = "";
-
+    let report = "";
     let padding = 0;
+
     if (suite.getTitle() !== "") {
       padding += 1;
 
