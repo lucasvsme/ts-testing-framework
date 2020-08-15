@@ -1,6 +1,6 @@
 # TypeScript Testing Framework
 
-It's a prototype of a [testing framework](https://en.wikipedia.org/wiki/Software_testing) written to practice software design.
+It's a prototype of a [testing framework](https://en.wikipedia.org/wiki/Software_testing) built to practice software design.
 
 The goal is to develop a minimal set of APIs that allows developers to write unit tests to their code and to have a report showing passing and failing tests. If a test fails we want to show the reason for that and the text should be red. Passing tests should be displayed in green.
 
