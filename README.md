@@ -17,7 +17,7 @@ The non-goal is to replace any existing production-ready or not testing framewor
 
 ### Single test suite
 
-```
+```typescript
 Tests.run((suite) => [
   suite.test("2 + 2 is equal to 4", async () => {
     Expect(2 + 2).toBeEqualTo(4);
@@ -47,7 +47,7 @@ Tests.run((suite) => [
 
 ### Tests grouped by name
 
-```
+```typescript
 Tests.grouped("Assertions API", (suite) => [
   suite.test("Expect toBeEqualTo true", async () => {
     Expect(123).toBeEqualTo(123);
